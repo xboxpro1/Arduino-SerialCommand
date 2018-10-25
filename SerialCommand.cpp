@@ -110,3 +110,11 @@ void SerialCommand::clearBuffer() {
 char *SerialCommand::next() {
   return strtok_r(NULL, delim, &last);
 }
+
+byte SerialCommand::commandNumber() {
+  return commandCount;
+}
+
+char *SerialCommand::commandName(byte index) {
+  return commandList[index].command;
+}
