@@ -41,7 +41,9 @@ class SerialCommand {
     void readSerial();    // Main entry point.
     void clearBuffer();   // Clears the input buffer.
     char *next();         // Returns pointer to next token found in command buffer (for getting arguments to commands).
-
+    byte commandNumber(); // Get command count number;
+    char *commandName(byte index);   // Returns the command from Index
+    
   private:
     // Command/handler dictionary
     struct SerialCommandCallback {
