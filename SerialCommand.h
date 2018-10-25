@@ -25,7 +25,6 @@
 #define SerialCommand_h
 
 #include <Arduino.h>
-#include <WProgram.h>
 #include <string.h>
 
 // Size of the input buffer in bytes (maximum length of one command plus arguments)
