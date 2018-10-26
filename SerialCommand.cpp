@@ -121,6 +121,10 @@ char *SerialCommand::commandName(byte i) {
   char *comName = commandList[i].command;
   for (index = 0; index < sizeof(comName); index++){
     if(isprint(comName[index])) command[index] = comName[index];
+    else{
+      index--;
+      break;
+    }
   }
   index++;
   command[index] = '\0';
