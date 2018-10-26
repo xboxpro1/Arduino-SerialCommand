@@ -116,5 +116,13 @@ byte SerialCommand::commandNumber() {
 }
 
 char *SerialCommand::commandName(byte i) {
-  return commandList[i].command;
+  byte index;
+  char *command;
+  char *comName = commandList[i].command;
+  for (index = 0; index < sizeof(comName); index++){
+    if(isprint(comName[index])) command[index] = comName[index];
+  }
+  index++;
+  command[index] = '\0';
+  return command;
 }
